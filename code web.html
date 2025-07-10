@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>KicksHub - Just Do It Better</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&display=swap');
+    body {
+      font-family: 'Barlow Condensed', sans-serif;
+      color: #111111;
+      overflow-x: hidden;
+    }
+    .nav-link { position: relative; }
+    .nav-link:after {
+      content: '';
+      position: absolute;
+      width: 0;
+      height: 2px;
+      display: block;
+      margin-top: 5px;
+      right: 0;
+      background: #CEFF00;
+      transition: width 0.3s ease;
+    }
+    .nav-link:hover:after {
+      width: 100%;
+      left: 0;
+      background: #CEFF00;
+    }
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    }
+    .btn {
+      background: #111;
+      color: white;
+      border: 1px solid #111;
+      transition: all 0.3s ease;
+    }
+    .btn:hover {
+      background: white;
+      color: #111;
+    }
+    .btn.secondary {
+      background: white;
+      color: #111;
+    }
+    .btn.secondary:hover {
+      background: #111;
+      color: white;
+    }
+    .hero-text {
+      text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    }
+  </style>
+</head>
+<body class="bg-white">
+
+  <!-- Header -->
+  <header class="sticky top-0 z-50 bg-white border-b border-gray-100">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+      <a href="#" class="text-2xl font-bold text-black">KicksHub</a>
+      <nav class="hidden md:flex space-x-8">
+        <a href="#" class="nav-link font-medium uppercase">New</a>
+        <a href="#" class="nav-link font-medium uppercase">Men</a>
+        <a href="#" class="nav-link font-medium uppercase">Women</a>
+        <a href="#" class="nav-link font-medium uppercase">Kids</a>
+        <a href="#" class="nav-link font-medium uppercase">Sale</a>
+      </nav>
+      <div class="flex items-center space-x-4">
+        <button class="p-2">🔍</button>
+        <button class="p-2">🛒</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="relative h-screen">
+    <div class="absolute inset-0 bg-black opacity-20 z-10"></div>
+    <img src="https://via.placeholder.com/1500x800" class="w-full h-full object-cover" alt="Hero" />
+    <div class="absolute inset-0 flex items-center z-20">
+      <div class="container mx-auto px-4 text-white">
+        <h1 class="text-6xl font-bold uppercase mb-4 hero-text">AIR MAX <span class="text-[#CEFF00]">PULSE</span></h1>
+        <p class="text-xl mb-8 max-w-xl hero-text">The revolution lives on. Bolder. Louder. Ready for anything.</p>
+        <a href="#" class="btn px-6 py-3 font-bold uppercase">Shop</a>
+        <a href="#" class="btn secondary px-6 py-3 font-bold uppercase ml-4">Explore</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Products -->
+  <section class="py-20">
+    <div class="container mx-auto px-4">
+      <h2 class="text-3xl font-bold uppercase mb-12">Latest Drops</h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div class="product-card transition-all duration-300">
+          <div class="bg-gray-100 p-6 flex items-center justify-center h-64">
+            <img src="https://via.placeholder.com/300x200" class="h-full object-contain" alt="Shoe 1" />
+          </div>
+          <div class="mt-4">
+            <h3 class="font-bold uppercase">Air Zoom Pro</h3>
+            <p class="text-gray-500 mb-2">Men's Shoes</p>
+            <p class="font-bold text-lg">$140</p>
+          </div>
+        </div>
+        <!-- Repeat above block for other products as needed -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-black text-white py-10">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div>
+          <h4 class="uppercase font-bold mb-4">Company</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#">About</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="uppercase font-bold mb-4">Help</h4>
+          <ul class="space-y-2 text-gray-400">
+            <li><a href="#">Shipping</a></li>
+            <li><a href="#">Returns</a></li>
+            <li><a href="#">FAQs</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="uppercase font-bold mb-4">Newsletter</h4>
+          <input type="email" placeholder="Your email" class="w-full px-4 py-2 text-black" />
+        </div>
+      </div>
+      <div class="text-center text-sm text-gray-500 border-t border-gray-700 pt-6">
+        © 2025 KicksHub. This is a fictional website for educational use only. Not affiliated with Nike.
+      </div>
+    </div>
+  </footer>
+
+</body>
+</html>
